@@ -25,12 +25,12 @@ jobs:
         ports:
           - 55432:55432
         options: >-
-          --health-cmd pg_isready -U ${{secrets.DATABASE_USERNAME}} -d ${{secrets.DATABASE_NAME}}_test
+          --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
 
-          
+
     runs-on: ubuntu-latest
     steps:
       - name: pulling code
